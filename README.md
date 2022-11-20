@@ -1,2 +1,2 @@
-# Interactive-Stone-Flowers
+# Interactive-Pyramids
 DMA Final Project
