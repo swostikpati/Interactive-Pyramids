@@ -176,20 +176,48 @@ def calm3(t):
         time.sleep(t/80)
 
 def intense1(t):
-    strip.fill((100,210,210,255))
-    time.sleep(t/6)
-    strip.fill((255,255,255,255))
-    time.sleep(t/6)
-    strip.fill((255,255,155,0))
-    time.sleep(t/6)
-    strip.fill((128,128,128,128))
-    time.sleep(t/6)
-    strip.fill((215,215,100,255))
-    time.sleep(t/6)
-    strip.fill((255,100,255,255))
-    time.sleep(t/6)
+    #strip.fill((100,110,210,255))
+    strip.fill(colorwheel(117))
+    time.sleep(0.9)
+    strip.fill(colorwheel(110))
+    time.sleep(.9)
+    strip.fill((155,255,155,205))
+    time.sleep(1.5)
+    strip.fill((108,128,78,128))
+    time.sleep(1.2)
+    strip.fill((215,215,50,155))
+    time.sleep(1.1)
+    strip.fill((215,215,30,215))
+    time.sleep(.7)
+    strip.fill((215,215,110,255))
+    time.sleep(1.2)
+    strip.fill((255,50,255,255))
+    time.sleep(t/3)
 
 def intense2(t):
+    strip.fill(colorwheel(30))
+    time.sleep(t/6)
+    strip.fill(colorwheel(25))
+    time.sleep(t/6)
+    strip.fill(colorwheel(20))
+    time.sleep(t/6)
+    strip.fill(colorwheel(15))
+    time.sleep(t/6)
+    strip.fill(colorwheel(10))
+    time.sleep(t/3)
+    strip.fill((255,0,0,255))
+    time.sleep(2.7)
+    for i in range(51):
+        strip.fill((255-i*5,0,0,255))
+        time.sleep(0.05)
+    # for i in range(50):
+#         BRIGHTNESS = 0.5-i/100
+#         strip.fill((255, 0, 0, 255))
+#         time.sleep(2/50)
+#     strip.fill(0)
+#     BRIGHTNESS = 0.5
+
+def intense3(t):
     strip.fill((0,0,205))
     time.sleep(t/6)
     strip.fill((205,0,205))
@@ -202,6 +230,8 @@ def intense2(t):
     time.sleep(t/6)
     strip.fill((25,0,255))
     time.sleep(t/6)
+    strip.fill((255,0,0,255))
+    time.sleep(3)
 
 
 '''while True:

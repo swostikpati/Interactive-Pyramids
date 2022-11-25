@@ -43,8 +43,8 @@ while True:
         print("Changed")
         ##function call
         #music.musicOn()
-        musicCode.play(i)
-        i=(i+1)%2
+        musicCode.play(i+1)
+        i=(i+1)%1
         flag = False
         print(i)
     else:

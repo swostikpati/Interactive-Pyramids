@@ -24,7 +24,7 @@ pbrightness = brightness
 # colorArr = [0, 10, 30, 50]
 
 #happy
-colorArr = [70, 80]
+#colorArr = [70, 80]
 
 
 
@@ -43,12 +43,13 @@ while True:
         print("Changed")
         ##function call
         #music.musicOn()
-        musicCode.play(i, colorArr[i])
-        i=(i+1)%2
+        musicCode.play(i)
+        i=(i+1)%1
         flag = False
-#         print(i)
+        print(i)
     else:
         flag = True
     pbrightness = brightness
 
     time.sleep(1)                   # Wait a bit before checking all again
+

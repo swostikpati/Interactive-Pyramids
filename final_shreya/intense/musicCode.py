@@ -49,8 +49,8 @@ sample_number = 0
 #sample_duration = [7, 9, 10]
 
 #intense
-samples = ['music/xmas-calm.mp3', 'music/intro-transition.mp3']
-sample_duration = [11, 8]
+samples = ['music/xmas-calm.mp3', 'music/space-ambient.mp3', 'music/interstellar-track2.mp3']
+sample_duration = [11, 8, 12]
 
 def play(a):
     global samples #very important to reference global variables inside
