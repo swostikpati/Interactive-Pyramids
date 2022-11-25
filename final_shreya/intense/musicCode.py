@@ -33,18 +33,12 @@ enable.value = True
 speaker = audioio.AudioOut(board.A0)
 
 sample_number = 0
-# samples = ['music/cinematic-dreams.mp3', 'music/marvel-piano.mp3', 'music/rain-thunder.mp3', 'music/space-ambient.mp3', 'music/guitar1.mp3']
-# sample_duration = [18, 6, 7, 12, 9]
-
-#suspenseful
-# samples = ['music/cinematic-dreams.mp3', 'music/interstellar-track.mp3', 'music/space-ambient.mp3', 'music/suspenseful-horror.mp3']
-# sample_duration = [17, 27, 12, 7]
 
 #happy
-#samples = ['music/game-show.mp3', 'music/marvel-piano.mp3']
-#sample_duration = [8, 6]
+#samples = ['music/game-show.mp3', 'music/marvel-piano.mp3', 'music/happy3.mp3']
+#sample_duration = [8, 6, 4]
 
-# calm/suspenseful
+#calm/suspenseful
 #samples = ['music/summer-piano.mp3', 'music/just-chill1.mp3', 'music/just-chill2.mp3']
 #sample_duration = [7, 9, 10]
 

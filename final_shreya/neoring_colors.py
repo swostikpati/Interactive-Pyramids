@@ -55,8 +55,8 @@ def lightLED(color, t):
 def lightLED2(b,t1):
     if (b==0):
         #happy1(t1)
-        calm1(t1)
-        #intense1(t1)
+        #calm1(t1)
+        intense1(t1)
     elif (b==1):
         #happy2(t1)
         #calm2(t1)
@@ -154,39 +154,64 @@ def happy2(t):
 
 
 def happy3(t):
-    time.sleep(.5)
-    for i in range(4):
-        strip[i]=(84,255,251) #cyan
-    time.sleep(.5)
-    for i in range(4):
-        strip[i+4]=(231,178,255) # light purple
-    time.sleep(.5)
-    for i in range(4):
-        strip[i+8]=(137,255,204) # light green
-    time.sleep(.5)
-    strip.fill((125, 249, 255)) # electric blue
-    time.sleep(1)
-    strip.fill((245,218,223)) # light pink
-    time.sleep(.6)
-    strip.fill((0,0,0))
-    for i in [0,1,2,9,10,11]:
-        strip[i]=(64,224,208) #turquiose
-    time.sleep(t/12)
-    #strip.fill((0,0,0))
-    for i in [3,4,5,6,7,8]:
-        strip[i]=(231,178,255) # light purple
-    time.sleep(t/12)
-    #strip.fill((0,0,0))
+    time.sleep(.2)
     for i in range(6):
-        strip[i]=(84,255,251) #cyan
-    time.sleep(t/12)
-    strip.fill((0,0,0))
+        strip[i]=colorwheel(10) #cyan
+    time.sleep(.5)
     for i in range(6):
-        strip[i+6]=(127,255,212) # aquamarine
-    time.sleep(t/12)
-    for i in [0,1,2,9,10,11]:
-        strip[i]=(245,218,223) #light pink
-    time.sleep(t/12)
+        strip[i+6]=colorwheel(213) # light purple
+    time.sleep(.5)
+    for i in range(4):
+        strip[i-2]=colorwheel(30) # yellow
+    time.sleep(.2)
+    for i in range(4):
+        strip[i+2]=colorwheel(5) # light green
+    time.sleep(.2)
+    for i in range(4):
+        strip[i+6]=colorwheel(55) # light green
+    time.sleep(.4)
+    strip.fill(0)
+    #time.sleep(0.2)
+    for i in range(6):
+        strip[i]=colorwheel(10) #cyan
+    time.sleep(.5)
+    for i in range(6):
+        strip[i+6]=colorwheel(213) # light purple
+    time.sleep(.5)
+    for i in range(4):
+        strip[i-2]=colorwheel(30) # yellow
+    time.sleep(.2)
+    for i in range(4):
+        strip[i+2]=colorwheel(5) # light green
+    time.sleep(.2)
+    for i in range(4):
+        strip[i+6]=colorwheel(55) # light green
+    time.sleep(.4)
+    #strip.fill(0)
+
+#     strip.fill((125, 249, 255)) # electric blue
+#     time.sleep(1)
+#     strip.fill((245,218,223)) # light pink
+#     time.sleep(.6)
+#     strip.fill((0,0,0))
+#     for i in [0,1,2,9,10,11]:
+#         strip[i]=(64,224,208) #turquiose
+#     time.sleep(t/12)
+#     strip.fill((0,0,0))
+#     for i in [3,4,5,6,7,8]:
+#         strip[i]=(231,178,255) # light purple
+#     time.sleep(t/12)
+#     strip.fill((0,0,0))
+#     for i in range(6):
+#         strip[i]=(84,255,251) #cyan
+#     time.sleep(t/12)
+#     strip.fill((0,0,0))
+#     for i in range(6):
+#         strip[i+6]=(127,255,212) # aquamarine
+#     time.sleep(t/12)
+#     for i in [0,1,2,9,10,11]:
+#         strip[i]=(245,218,223) #light pink
+#     time.sleep(t/12)
 
 
 
@@ -194,45 +219,32 @@ def happy3(t):
 
 
 def calm1(t):
-    # strip.fill((0,99,156))
-#     time.sleep(t/10)
-#     strip.fill((84,255,251))
-#     time.sleep(t/10)
-
+    time.sleep(0.4)
     for i in range(5):
         #j = 156+9.9*i
         strip.fill((0+84*0.2*i,99+(255-99)*0.2*i,156+(251-156)*0.2*i))
         time.sleep(t/50)
-
     for i in range(5):
         strip.fill((84+(231-84)*0.2*i,255-(255-178)*0.2*i,255))
         time.sleep(t/50)
-
-    for i in range(4):
-        strip[i+4]=(231,178,255) # light purple
     time.sleep(t/10)
     for i in range(4):
-        strip[i]=colorwheel(137)
+        strip[i+4]=colorwheel(137)
     time.sleep(t/10)
-    strip.fill((125, 249, 255)) # electric blue
+    for i in range(4):
+        strip[i+8]=(125, 249, 255) # electric blue
     time.sleep(t/10)
-    strip.fill((245,218,223)) # light pink
+    for i in range(4):
+        #strip[i]=((0,99,156))
+        strip[i]=(colorwheel(157)) # light pink
     time.sleep(t/5)
-    # strip.fill(colorwheel(140))
-#     time.sleep(t/10)
-    for i in range(6):
-        strip[i]=(84,255,251) #cyan
-    time.sleep(t/10)
-    #strip.fill((0,0,0))
-    for i in range(6):
-        strip[i+6]=(127,255,212) # aquamarine
-    time.sleep(t/10)
-    for i in [0,1,2,9,10,11]:
-        strip[i]=(245,218,223) #light pink
-    time.sleep(t/10)
-    #strip.fill(colorwheel(213))
-    time.sleep(t/10)
-    # put fade!!
+    for i in range(5):
+        strip.fill((84+(127-84)*0.2*i,255,251-(251-212)*0.2*i))
+        time.sleep(t/50)
+    for i in range(5):
+        strip.fill((127+(245-127)*0.2*i,255-(255-218)*0.2*i,223))
+        time.sleep(t/50)
+    time.sleep(t/5)
 
 # def calm1(t):
 #     for i in range(45):
@@ -243,12 +255,12 @@ def calm1(t):
 #         time.sleep(t/80)
 
 def calm2(t):
-    for i in range(45):
-        strip[i%12]=(0,i*5,255-i*5)
+    for i in range(90):
+        strip[i%12]=(0,225-i*2.5,30+i*2.5)
         time.sleep(t/80)
-    for i in range(45):
-        strip[(i+9)%12]=(0,225-i*5,30+i*5)
-        time.sleep(t/80)
+#     for i in range(45):
+#         strip[(i+9)%12]=(0,225-i*5,30+i*5)
+#         time.sleep(t/80)
 
 def calm3(t):
     for i in range(45):
@@ -265,19 +277,19 @@ def calm3(t):
 
 def intense1(t):
     #strip.fill((100,110,210,255))
-    strip.fill(colorwheel(117))
+    strip.fill(colorwheel(210))
     time.sleep(0.9)
-    strip.fill(colorwheel(110))
+    strip.fill(colorwheel(200))
     time.sleep(.9)
-    strip.fill((155,255,155,205))
+    strip.fill((108,58,158,255))
     time.sleep(1.5)
-    strip.fill((108,128,78,128))
+    strip.fill((205,155,255,128))
     time.sleep(1.2)
     strip.fill((215,215,50,155))
     time.sleep(1.1)
     strip.fill((215,215,30,215))
     time.sleep(.7)
-    strip.fill((215,215,110,255))
+    strip.fill((215,215,10,255))
     time.sleep(1.2)
     strip.fill((255,50,255,255))
     time.sleep(t/3)

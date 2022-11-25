@@ -44,7 +44,7 @@ while True:
         ##function call
         #music.musicOn()
         musicCode.play(i)
-        i=(i+1)%2
+        i=(i+1)%3
         flag = False
         print(i)
     else:

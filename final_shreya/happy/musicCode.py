@@ -33,27 +33,18 @@ enable.value = True
 speaker = audioio.AudioOut(board.A0)
 
 sample_number = 0
-# samples = ['music/cinematic-dreams.mp3', 'music/marvel-piano.mp3', 'music/rain-thunder.mp3', 'music/space-ambient.mp3', 'music/guitar1.mp3']
-# sample_duration = [18, 6, 7, 12, 9]
-
-#suspenseful
-# samples = ['music/cinematic-dreams.mp3', 'music/interstellar-track.mp3', 'music/space-ambient.mp3', 'music/suspenseful-horror.mp3']
-# sample_duration = [17, 27, 12, 7]
 
 #happy
-samples = ['music/game-show.mp3', 'music/marvel-piano.mp3']
-sample_duration = [8, 6]
+samples = ['music/game-show.mp3', 'music/marvel-piano.mp3', 'music/happy3.mp3']
+sample_duration = [8, 6, 4]
 
-# if startup_play:  # Play all on startup
-#     for sample in samples:
-#         print("Now playing: '{}'".format(sample))
-#         mp3stream = audiomp3.MP3Decoder(open(sample, "rb"))
-#         speaker.play(mp3stream)
+#calm/suspenseful
+#samples = ['music/summer-piano.mp3', 'music/just-chill1.mp3', 'music/just-chill2.mp3']
+#sample_duration = [7, 9, 10]
 
-#         while speaker.playing:
-#             time.sleep(0.1)
-#     enable.value = speaker.playing
-
+#intense
+#samples = ['music/xmas-calm.mp3', 'music/space-ambient.mp3', 'music/interstellar-track2.mp3']
+#sample_duration = [11, 8, 12]
 
 def play(a):
     global samples #very important to reference global variables inside
@@ -65,13 +56,3 @@ def play(a):
             time.sleep(0.1)
 #     sample_number +=1;
 
-#play()
-#play()
-# while True:
-#     if accel.tapped and speaker.playing is False:
-#         sample = samples[sample_number]
-#         print("Now playing: '{}'".format(sample))
-#         mp3stream = audiomp3.MP3Decoder(open(sample, "rb"))
-#         speaker.play(mp3stream)
-#         sample_number = (sample_number + 1) % len(samples)
-#     enable.value = speaker.playing
