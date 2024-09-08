@@ -1,3 +1,4 @@
 # Interactive-Pyramids
 DMA Final Project
-https://desert.nyuadim.com/
+
+Full Documentation: https://desert.nyuadim.com/lifemeetslife/
